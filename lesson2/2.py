@@ -3,15 +3,16 @@
 # При нечетном количестве элементов последний сохранить на своем месте.
 # Для заполнения списка элементов необходимо использовать функцию input().
 
+
 lst = []
 while True:
     elem = input("Введи что-нибудь для наполнения списка. Надоест - напиши /end: ")
-    if elem !='/end':
+    if elem != '/end':
         lst.append(elem)
     else:
         break
 print("Введенный список ", lst)
-for i in range(len(lst)//2):
-    lst.insert(i*2+2, lst[i*2])
-    lst.pop(i*2)
+for i in range(len(lst) // 2):
+    lst.insert(i * 2 + 2, lst[i * 2])
+    lst.pop(i * 2)
 print("После обмена элементами: ", lst)
